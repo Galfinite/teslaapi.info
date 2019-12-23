@@ -63,7 +63,8 @@ Site Configuration
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Get installation and configuration details about the site.
+Get installation and configuration details about the site.  
+The `site_name` field value can be changed using the **Site Name** command.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -84,13 +85,15 @@ Bearer `{access_token}` from authentication
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-This installation has solar panels only and is located in the `America/New_York` time zone.
+This installation has solar panels only and is located in the `America/New_York` time zone.  
+If the site does not have a name set \(using the **Site Name** command\), the `site_name` field will be missing from the response object.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
   "response": {
     "id": "00000000-0000-0000-0000-000000000000",
+    "site_name": "My Site",
     "installation_date": "2017-01-01T00:00:00-05:00",
     "user_settings": {
       "storm_mode_enabled": null,

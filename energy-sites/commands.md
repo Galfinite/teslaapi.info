@@ -48,7 +48,7 @@ Site Name
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Change the user-facing name of the energy site.  
+Change the user-facing name of the energy site. This value can be read from the **Site Configuration** method.  
 The request body is a JSON object.
 {% endapi-method-description %}
 
