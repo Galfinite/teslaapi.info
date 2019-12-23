@@ -2,7 +2,6 @@
 
 {% api-method method="get" host="https://owner-api.teslamotors.com" path="/api/1/diagnostics" %}
 {% api-method-summary %}
-  
 Entitlements
 {% endapi-method-summary %}
 
@@ -25,7 +24,7 @@ Bearer `{access_token}` from authorization
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -57,7 +56,7 @@ Bearer `{access_token}` from authorization
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
