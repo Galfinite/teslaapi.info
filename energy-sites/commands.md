@@ -17,7 +17,7 @@ Backup Reserve
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{site_id}` from the products list
+The `{energy_site_id}` from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -48,32 +48,49 @@ Site Name
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Change the user-facing name of the energy site. This value can be read from the **Site Configuration** method.  
+The request body is a JSON object.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{site_id}` from the products list
+The `{energy_site_id}` from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+`application/json` or `application/json; charset=utf-8`
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="Authorization" type="string" required=true %}
 Bearer `{access_token}` from authentication
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="site\_name" type="string" required=true %}
+The new name for the site.  
+`{ "site_name": "My Site" }`
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+The HTTP response code is actually `200`, even though the response body contains the number `201`.
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+  "response": {
+    "code": 201,
+    "message": "Updated"
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -93,7 +110,7 @@ Operation Mode
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{site_id}` from the products list
+The `{energy_site_id}` from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -131,7 +148,7 @@ Time Of Use Settings
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{site_id}` from the products list
+The `{energy_site_id}` from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -169,7 +186,7 @@ Storm Mode
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{site_id}` from the products list
+The `{energy_site_id}` from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

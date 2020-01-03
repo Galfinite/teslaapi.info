@@ -24,7 +24,7 @@ Bearer `{access_token}` response from authentication
 
 {% endapi-method-response-example-description %}
 
-```text
+```javascript
 {
   "response": [
     {
@@ -44,9 +44,18 @@ Bearer `{access_token}` response from authentication
       "calendar_enabled": true,
       "backseat_token": null,
       "backseat_token_updated_at": null
+    },
+    {
+      "energy_site_id": :energy_site_id,
+      "resource_type": "solar",
+      "site_name": "My Site",
+      "id": :energy_site_guid,
+      "solar_power": 760,
+      "sync_grid_alert_enabled": false,
+      "breaker_alert_enabled": false
     }
   ],
-  "count": 1
+  "count": 2
 }
 ```
 {% endapi-method-response-example %}

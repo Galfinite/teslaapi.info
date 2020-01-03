@@ -459,7 +459,7 @@ Bearer `{access_token}` from authorization
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
