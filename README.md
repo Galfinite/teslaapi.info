@@ -11,10 +11,11 @@ This site is broken into sections for different API information:
 ## What Tesla products are supported?
 
 * Tesla Model S
-* Tesla Model X
 * Tesla Model 3
+* Tesla Model X
+* Tesla Model Y \(coming soon\)
 
-## What is teslaapi.io?
+## What is teslaapi.info?
 
 This is a community of developers who are reverse engineering Tesla's API.
 
